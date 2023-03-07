@@ -1,7 +1,8 @@
 import { Button, ButtonWrapper } from './FeedbackOptions.styled';
 import PropTypes from 'prop-types';
 
-export default function FeedbackOptions({ options, onLeaveFeedback }) {
+export default function FeedbackOptions({ onLeaveFeedback }) {
+  const options = [`Good`, `Neutral`, `Bad`];
   return (
     <ButtonWrapper>
       {options.map(item => {

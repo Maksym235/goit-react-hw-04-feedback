@@ -5,8 +5,6 @@ import { Statistics } from './Statistics/Statistics';
 import Notification from './Notification/Notification';
 import Persentage from './Percentage/Persentage';
 
-const options = [`Good`, `Neutral`, `Bad`];
-
 export default function App() {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
@@ -41,7 +39,7 @@ export default function App() {
   const percent = positivePercentage();
   return (
     <Section title={`Please leave feedback`}>
-      <FeedbackOptions options={options} onLeaveFeedback={addStatOnClick} />
+      <FeedbackOptions onLeaveFeedback={addStatOnClick} />
       {countTotalFeedback() ? (
         <>
           <Statistics good={good} neutral={neutral} bad={bad} total={total} />
